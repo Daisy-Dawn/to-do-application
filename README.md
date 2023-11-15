@@ -1,4 +1,7 @@
+
 # React + Vite
+
+To do Application which makes use of login authentication, BAAS Server - AppWrite for the backend and a dashboard where you can create, edit, delete and read your daily To do's.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
