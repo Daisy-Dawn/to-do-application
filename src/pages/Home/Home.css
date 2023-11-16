@@ -1,3 +1,52 @@
-/* body {
-    background-color: brown;
-} */
+.firstPage-wrapper {
+  background: #00c9ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a3f1ac,
+    #07c1f5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #8ceb96,
+    #07a6d2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.first-page-content {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstPage-img {
+  height: 80%;
+}
+.firstPage-img-container {
+  display: flex;
+  align-items: center;
+}
+.firstPage-intro {
+  font-family: Agbalumo;
+  background: #121fcf;
+  background: linear-gradient(to right, #121fcf 0%, #cf1512 54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 30px;
+}
+.first-Page-paragraph {
+    font-size: 16px;
+  font-weight: 500;
+  background: #0b1380;
+  background: linear-gradient(
+    to right,
+    #0b1380 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 59%,
+    #272727 76%,
+    #111111 87%,
+    #1b1b1b 2%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
