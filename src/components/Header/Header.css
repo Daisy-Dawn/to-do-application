@@ -1,3 +1,128 @@
-body {
-    background-color: red;
+.header-wrapper {
+    height: 70px;
+    padding: 0px 10px;
+    background-image: linear-gradient(to right, #000000 , #434343);
+}
+.header-logo {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    gap: 10px;
+}
+.header-name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    font-family: Agbalumo;
+}
+.logo-image {
+    height: 50px;
+    margin-left: 20px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    height: 70px;
+}
+.nav-links li {
+    list-style-type: none;
+    position: relative;
+}
+.nav-links li a {
+    text-decoration: none;
+}
+.header-text-button {
+    color:#fff !important;
+    width: 70px !important;
+}
+.header-login-button {
+    color: #000000 !important;
+    background-color: #f1c40f !important;
+    font-weight: 600 !important;
+    width: 70px !important;
+}
+.header-register-button {
+    color: #fff !important;
+    background-color: #1A5D1A !important;
+    width: 70px !important;
+}
+.hamburger {
+    display: none;
+}
+
+@media screen  and (max-width: 800px) {
+   .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 60px 13%;
+    background-image: linear-gradient(#000000 , #434343);
+    transition: 0.3s ease-in-out;
+   }
+   .nav-links.close {
+    right: 0;
+   }
+   .hamburger {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+    height: 70px;
+}
+.hamburger .bar {
+    color: #f5f6fa;
+    cursor: pointer;
+    font-size: 24px;
+}
+}
+@media screen  and (max-width: 650px) {
+    .header-name {
+        font-size: 15px;
+    }
+    .logo-image {
+        height: 40px;
+    }
+}
+@media screen  and (max-width: 500px)  {
+    .header-name {
+        font-size: 12px;
+    }
+    .logo-image {
+        height: 30px;
+    }
+    .hamburger .bar {
+        font-size: 18px;
+    }
+}
+@media  (min-width: 800px) and (max-width: 1000px) {
+    .nav-links {
+        gap: 20px;
+        font-size: 13px;
+        /* justify-content: space-around; */
+        height: 70px;
+    }
+    .header-text-button {
+        width: 60px !important;
+    }
+    .header-login-button {
+        width: 60px !important;
+    }
+    .header-register-button {
+        width: 60px !important;
+    }
 }

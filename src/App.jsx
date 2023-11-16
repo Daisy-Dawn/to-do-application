@@ -6,6 +6,7 @@ import { Login } from "./pages/Login/Login";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 import { RootLayout } from "./components/RootLayout/RootLayout";
 import { NoPage } from "./pages/NoPage/NoPage";
+import { About } from "./pages/About/About";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<RootLayout />}>
@@ -13,6 +14,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="register" element={<Register />}></Route>
     <Route path="login" element={<Login />}></Route>
     <Route path="dashboard" element={<Dashboard />}></Route>
+    <Route path="about" element={<About />}></Route>
     <Route path="*" element={<NoPage />}></Route>
 
   </Route>
