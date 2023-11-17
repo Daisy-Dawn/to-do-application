@@ -14,7 +14,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="w3-col" style={{width: "100%"}}>
+      <div className="w3-col" style={{width: "100%", minHeight: "200px"}}>
         <Carousel afterChange={onChange} effect="fade">
           <div>
           <FirstPage></FirstPage>
