@@ -6,14 +6,14 @@ import { Login } from "./pages/Login/Login";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 import { RootLayout } from "./components/RootLayout/RootLayout";
 import { NoPage } from "./pages/NoPage/NoPage";
-import { About } from "./pages/About/About";
+import { Contact } from "./pages/Contact/Contact";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
       <Route element={<RootLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NoPage/>} />
       </Route>
       <Route path="login" element={<Login />} />

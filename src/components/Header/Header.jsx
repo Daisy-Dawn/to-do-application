@@ -44,7 +44,7 @@ export const Header = () => {
                 </li>
                 <li>
                   <Button className="header-text-button" variant="text">
-                    <NavLink to="about">About</NavLink>
+                    <NavLink to="contact">Contact</NavLink>
                   </Button>
                 </li>
               </ul>

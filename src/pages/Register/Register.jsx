@@ -7,11 +7,16 @@ export const Register = () => {
     <div className="glass-container">
       <div className="w3-col register-wrapper" style={{minHeight: "90vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-40 h-10 w-auto"
-            src="/images/Home/logo.png"
-            alt="CreativeME"
-          />
+        <div className="header-logo">
+              <span>
+                <img
+                  className="logo-image"
+                  src="/images/Home/logo.png"
+                  alt=""
+                />
+              </span>
+              <h2 style={{color: "black"}} className="header-name">CreativeME</h2>
+            </div>
           <h2 className="mt-8 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
           Get Started
           </h2>

@@ -1,3 +1,45 @@
-/* body {
-    background-color: bisque;
-} */
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    rgb(8, 49, 4) 0%,
+    #818c0a 51%,
+    #0b4d0c 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.bgimg {
+  background-image: url("https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.noPage-h1 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.horizontal-rule{
+    margin: auto;
+    height: 2px;
+    background-color: #eeeeeed3;
+    width: 70%;
+    margin-bottom: 70px;
+    border: none;
+}

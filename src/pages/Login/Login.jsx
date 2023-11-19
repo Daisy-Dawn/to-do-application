@@ -110,13 +110,17 @@ export const Login = () => {
               }}
             >
               <IconButton variant="soft" className='form-logo' color="neutral" size="sm">
-              <img
-                  className="logo-image form"
+              <div className="header-logo">
+              <span>
+                <img
+                  className="logo-image"
                   src="/images/Home/logo.png"
                   alt=""
                 />
+              </span>
+              <h2 className="header-name">CreativeME</h2>
+            </div>
               </IconButton>
-              <Typography level="title-lg">CreativeME</Typography>
             </Box>
             <ColorSchemeToggle />
           </Box>
@@ -243,7 +247,7 @@ export const Login = () => {
             'url(https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
           [theme.getColorSchemeSelector('dark')]: {
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1619189702188-7d072bfe8e4f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+              'url(https://images.unsplash.com/photo-1616353071588-708dcff912e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
           },
         })}
       />
