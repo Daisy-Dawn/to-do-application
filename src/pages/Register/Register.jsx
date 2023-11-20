@@ -1,7 +1,21 @@
+import { useState } from "react";
+import Button from "@mui/joy/Button"
 import "./Register.css"
+import {  NavLink } from "react-router-dom";
 import Typography from '@mui/joy/Typography';
 
 export const Register = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("")
+
+
+  const handleFormSubmission = (e) => {
+    e.preventDefault();
+    
+  } 
+
   return (
     <>
     <div className="glass-container">
@@ -24,13 +38,15 @@ export const Register = () => {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form onSubmit={handleFormSubmission} className="space-y-6" action="#" method="POST">
           <div>
               <label htmlFor="fullName" className="block text-sm font-semibold leading-6 text-gray-900">
                 Full Name
               </label>
               <div className="mt-2">
                 <input
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
                 placeholder="Ben Robbins"
                   id="fullName"
                   name="fullName"
@@ -48,6 +64,8 @@ export const Register = () => {
               </label>
               <div className="mt-2">
                 <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="ben@robbins.com"
                   id="email"
                   name="email"
@@ -67,6 +85,8 @@ export const Register = () => {
               </div>
               <div className="mt-2">
                 <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="123htsdkj%hSGDJH"
                   id="password"
                   name="password"
@@ -86,6 +106,8 @@ export const Register = () => {
               </div>
               <div className="mt-2">
                 <input
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="123htsdkj%hSGDJH"
                   id="forgotPassword"
                   name="forgotPassword"
@@ -118,6 +140,18 @@ export const Register = () => {
         {/* <p className=" mt-4 text-center text-sm text-black">© Daisy Dawn Cooperations {new Date().getFullYear()}</p> */}
         </div>
         <p className="w3-col w3-hide-small w3-hide-medium mt-2 text-center text-sm text-black">© Daisy Dawn Cooperations {new Date().getFullYear()}</p>
+        <Button
+            style={{
+              position: "absolute",
+              right: "70px",
+              top: "20px",
+              zIndex: "10",
+            }}
+            className="header-login-button "
+            variant="text"
+          >
+          <a href="login">Login</a>
+          </Button>
       </div>
     </>
   )

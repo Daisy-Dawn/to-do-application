@@ -71,6 +71,19 @@
     color: #fff !important;
     text-decoration: none !important;
 }
+.dashboard-button {
+    background-image: linear-gradient(to right, #000000 0%, #0f9b0f  51%, #000000  100%) !important;
+    transition: 0.5s !important;
+    background-size: 200% auto !important;
+    color: white !important;            
+    box-shadow: 0 0 20px #eee !important;
+    width: 100px !important;
+}
+.dashboard-button:hover {
+    background-position: right center !important; /* change the direction of the change here */
+    color: #fff !important;
+    text-decoration: none !important;
+}
 .hamburger {
     display: none;
 }
@@ -132,7 +145,6 @@
     .nav-links {
         gap: 20px;
         font-size: 13px;
-        /* justify-content: space-around; */
         height: 70px;
     }
     .header-text-button {

@@ -16,7 +16,7 @@ export const ThirdPage = () => {
                 </div>
                 <div className="w3-col 14 m4 s12 w3-padding">
                   <div className="each-testimonial">
-                    <div class="head">
+                    <div className="head">
                       <div className="flex">
                         <div className="img">
                           <img
@@ -41,7 +41,7 @@ export const ThirdPage = () => {
                 </div>
                 <div className="w3-col 14 m4 s12 w3-padding">
                 <div className="each-testimonial">
-                    <div class="head">
+                    <div className="head">
                       <div className="flex">
                         <div className="img">
                           <img
@@ -66,7 +66,7 @@ export const ThirdPage = () => {
                 </div>
                 <div className="w3-col 14 m4 s12 w3-padding">
                 <div className="each-testimonial">
-                    <div class="head">
+                    <div className="head">
                       <div className="flex">
                         <div className="img">
                           <img
