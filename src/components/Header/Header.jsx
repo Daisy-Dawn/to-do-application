@@ -10,11 +10,11 @@ export const Header = () => {
   const toggleNavIcon = () => {
     setNavBar(!navBar);
   };
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const logOutClick = () => {
-    navigate("/login");
-  };
+  const { user, logOutUser } = useAuth();
+  // const navigate = useNavigate();
+  // const logOutClick = () => {
+  //   navigate("/login");
+  // };
   return (
     <header>
       <div className="w3-col header-wrapper">
@@ -57,7 +57,7 @@ export const Header = () => {
                     </li>
                     <li>
                       <Button
-                        onClick={logOutClick}
+                        onClick={logOutUser}
                         className="header-login-button"
                         variant="contained"
                       >

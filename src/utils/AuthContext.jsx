@@ -1,20 +1,67 @@
 import { useState, useContext, useEffect, createContext } from "react";
+import {account} from "../appwrite/config"
+import { ID } from "appwrite";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
 
-    const [loading, setLoading] = useState(false);
-    const [user, setUser] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        setLoading(false)
+        checkUserStatus();
     }, [])
 
-    const loginUser = (userInfo) => {}
-    const logOutUser = () => {}
-    const registerUser =(userInfo) => {}
-    const checkUserStatus = () => {}
+    const loginUser = async (userInfo) => {
+        setLoading(true);
+        try {
+            let response = await account.createEmailSession(userInfo.email, userInfo.password);
+            let accountDetails = await account.get();
+            setUser(accountDetails);
+        } catch(err) {
+            console.error(err);
+        }
+
+        setLoading(false);
+    }
+    const logOutUser = () => {
+        account.deleteSession('current')
+        setUser(null)
+    }
+    const registerUser = async (userInfo) => {
+        setLoading(true);
+        try {
+          let response = await account.create(
+            ID.unique(),
+            userInfo.email,
+            userInfo.password,
+            userInfo.name
+          );
+      
+          await account.createEmailSession(userInfo.email, userInfo.password);
+          let accountDetails = await account.get();
+          setUser(accountDetails);
+          navigate('/');
+        } catch (err) {
+          console.error(err);
+        }
+      
+        setLoading(false);
+      };
+    const checkUserStatus = async () => {
+        try{
+            let accountDetails = await account.get()
+            setUser(accountDetails);
+
+        } catch(err) {
+
+        }
+
+        setLoading(false)
+    }
 
     const contextData = {
         user,

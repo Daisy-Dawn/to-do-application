@@ -18,6 +18,13 @@
   .hide-large {
     visibility:hidden;
   }
+  .toggle-password-register {
+    position: absolute !important;
+    top: 5px;
+    right: 20px;
+    z-index: 8;
+    color: grey;
+  }
   @media screen  and (max-width: 768px){
     .register-wrapper {
         width: 100%;

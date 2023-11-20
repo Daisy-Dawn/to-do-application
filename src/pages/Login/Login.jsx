@@ -21,6 +21,7 @@ import GoogleIcon from "./GoogleIcon";
 import { useState, useEffect, useRef } from "react";
 import { useAuth } from "../../utils/AuthContext";
 import { useNavigate, NavLink } from "react-router-dom";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 function ColorSchemeToggle({ onClick, ...props }) {
   const { mode, setMode } = useColorScheme();
@@ -55,7 +56,6 @@ function ColorSchemeToggle({ onClick, ...props }) {
 }
 
 export const Login = () => {
-
   const { user, loginUser } = useAuth();
   const navigate = useNavigate();
 
@@ -72,9 +72,15 @@ export const Login = () => {
     const email = loginForm.current.email.value;
     const password = loginForm.current.password.value;
 
-    const userInfo = {email, password}
-  }
+    const userInfo = { email, password };
+    loginUser(userInfo);
+  };
 
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <>
@@ -214,11 +220,18 @@ export const Login = () => {
                 <form ref={loginForm} onSubmit={handlesSubmit}>
                   <FormControl required>
                     <FormLabel>Email</FormLabel>
-                    <Input type="email" name="email" />
+                    <Input autoComplete="email" type="email" name="email" />
                   </FormControl>
                   <FormControl required>
                     <FormLabel>Password</FormLabel>
-                    <Input type="password" name="password" />
+                    <Input
+                      autoComplete="password"
+                      type={showPassword ? "text" : "password"}
+                      name="password"
+                    />
+                    <IconButton className="toggle-password" onClick={togglePasswordVisibility}>
+                      {showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
                   </FormControl>
                   <Stack gap={4} sx={{ mt: 2 }}>
                     <Box
@@ -274,19 +287,19 @@ export const Login = () => {
             },
           })}
         />
-  
-  <Button
-            style={{
-              position: "absolute",
-              right: "70px",
-              top: "20px",
-              zIndex: "10",
-            }}
-            className="header-register-button "
-            variant="text"
-          >
+
+        <Button
+          style={{
+            position: "absolute",
+            right: "70px",
+            top: "20px",
+            zIndex: "10",
+          }}
+          className="header-register-button "
+          variant="text"
+        >
           <a href="register">SignUp</a>
-          </Button>
+        </Button>
       </CssVarsProvider>
     </>
   );

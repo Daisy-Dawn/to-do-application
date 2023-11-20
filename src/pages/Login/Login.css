@@ -1,3 +1,9 @@
 .form-logo {
     background-color: transparent !important;
 }
+.toggle-password {
+    position: absolute !important;
+    top: 25px;
+    right: 20px;
+    z-index: 8;
+}
